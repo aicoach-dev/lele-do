@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="株式会社レレ堂のハウスクリーニングサービス一覧。エアコン・水回り・室内・空室・定期清掃・除菌消臭など、幅広いサービスをご提供します。">
+  <link rel="icon" href="images/logo_icon.png" type="image/png">
+  <title>サービス案内 | 株式会社レレ堂</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* service.html 追加スタイル */
+    .service-flow {
+      background: var(--color-bg-light);
+      border-radius: var(--border-radius);
+      padding: 40px 36px;
+      margin-bottom: 64px;
+    }
+
+    .service-flow h2 {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 28px;
+      color: var(--color-text);
+    }
+
+    .flow-steps {
+      display: flex;
+      align-items: flex-start;
+      gap: 0;
+      flex-wrap: wrap;
+    }
+
+    .flow-step {
+      flex: 1;
+      min-width: 150px;
+      text-align: center;
+      position: relative;
+    }
+
+    .flow-step:not(:last-child)::after {
+      content: '→';
+      position: absolute;
+      right: -12px;
+      top: 22px;
+      font-size: 1.2rem;
+      color: var(--color-primary-dark);
+      font-weight: 700;
+    }
+
+    .flow-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background: var(--color-primary);
+      color: var(--color-text);
+      border-radius: 50%;
+      font-family: var(--font-heading);
+      font-weight: 900;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .flow-step h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+      font-family: var(--font-heading);
+    }
+
+    .flow-step p {
+      font-size: 0.78rem;
+      color: var(--color-text-light);
+      line-height: 1.6;
+    }
+
+    .price-note {
+      background: var(--color-bg-gray);
+      border: 1px solid var(--color-border);
+      border-radius: var(--border-radius);
+      padding: 20px 24px;
+      font-size: 0.88rem;
+      color: var(--color-text-light);
+      line-height: 1.8;
+      margin-bottom: 48px;
+    }
+
+    .price-note strong {
+      color: var(--color-text);
+    }
+
+    @media (max-width: 767px) {
+      .flow-steps {
+        flex-direction: column;
+        gap: 16px;
+      }
+      .flow-step:not(:last-child)::after {
+        content: '↓';
+        right: auto;
+        top: auto;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .flow-step {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        text-align: left;
+      }
+      .flow-num {
+        flex-shrink: 0;
+        margin-bottom: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===================== ヘッダー ===================== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="images/logo_full.png" alt="レレ堂" height="48">
+      </a>
+      <nav class="global-nav">
+        <ul>
+          <li><a href="service.html">サービス</a></li>
+          <li><a href="company.html">会社概要</a></li>
+          <li><a href="recruit.html">採用情報</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <a href="recruit.html#entry" class="btn-primary btn-header-cta">採用エントリー</a>
+      <button class="hamburger" aria-label="メニューを開く" aria-expanded="false">☰</button>
+    </div>
+    <nav class="mobile-nav" aria-label="モバイルメニュー">
+      <ul>
+        <li><a href="service.html">サービス</a></li>
+        <li><a href="company.html">会社概要</a></li>
+        <li><a href="recruit.html">採用情報</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+      <a href="recruit.html#entry" class="btn-primary">採用エントリー</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===================== ページヘッダー ===================== -->
+    <div class="page-header">
+      <h1>レレ堂のサービス</h1>
+      <p>おそうじ革命加盟店として、高品質なハウスクリーニングをお届けします</p>
+    </div>
+
+    <section class="services-detail">
+      <div class="container">
+
+        <!-- おそうじ革命バッジ -->
+        <div class="fc-notice fade-in" style="margin-bottom:48px;">
+          🏅 <strong>おそうじ革命加盟店</strong> として高品質をお届けします<br>
+          <span style="font-size:0.88rem;">
+            フランチャイズ本部「おそうじ革命」の品質基準・研修制度のもと、
+            プロのクリーニング技術で丁寧な作業を提供します。
+          </span>
+        </div>
+
+        <!-- ===================== サービス詳細カード ===================== -->
+        <h2 class="section-title fade-in">サービスメニュー</h2>
+
+        <div class="service-detail-grid">
+
+          <div class="service-detail-card fade-in fade-in-delay-1">
+            <div class="service-icon">❄️</div>
+            <h3>エアコンクリーニング</h3>
+            <p>
+              エアコン内部のフィルター・熱交換器・ファン・ドレンパンまで分解洗浄。
+              カビ・ホコリ・ニオイを徹底除去し、清潔で効率的な冷暖房環境を取り戻します。
+              壁掛けタイプはもちろん、天井埋め込み型・業務用にも対応可能です。
+            </p>
+            <a href="contact.html" class="btn-outline">お問い合わせ・見積り</a>
+          </div>
+
+          <div class="service-detail-card fade-in fade-in-delay-2">
+            <div class="service-icon">🚿</div>
+            <h3>水回りクリーニング</h3>
+            <p>
+              浴室・キッチン・洗面台・トイレなどの水回りを専用洗剤と機材で徹底洗浄。
+              水垢・石けんカス・カビ・黒ずみを除去します。
+              セットプランで浴室＋洗面＋トイレまとめてご依頼いただけます。
+            </p>
+            <a href="contact.html" class="btn-outline">お問い合わせ・見積り</a>
+          </div>
+
+          <div class="service-detail-card fade-in fade-in-delay-1">
+            <div class="service-icon">🏠</div>
+            <h3>室内クリーニング</h3>
+            <p>
+              リビング・寝室・廊下・玄関など居室全体のハウスクリーニング。
+              窓ガラス・サッシ・フローリング・壁紙まで、日常清掃では落とせない頑固な汚れを一掃します。
+              定期メンテナンスとしてもご利用いただけます。
+            </p>
+            <a href="contact.html" class="btn-outline">お問い合わせ・見積り</a>
+          </div>
+
+          <div class="service-detail-card fade-in fade-in-delay-2">
+            <div class="service-icon">🏢</div>
+            <h3>空室クリーニング</h3>
+            <p>
+              賃貸物件の入居・退去時に対応した原状回復クリーニング。
+              キッチン・バス・トイレ・フローリング・クロスまで全箇所を丁寧に仕上げます。
+              不動産管理会社・オーナー様のまとめてのご依頼も歓迎します。
+            </p>
+            <a href="contact.html" class="btn-outline">お問い合わせ・見積り</a>
+          </div>
+
+          <div class="service-detail-card fade-in fade-in-delay-1">
+            <div class="service-icon">🗓️</div>
+            <h3>定期清掃</h3>
+            <p>
+              週1回・隔週・月1回など、ご希望のペースで定期的にお伺いする清掃サービス。
+              家事の負担を軽減しながら、常に清潔な住環境を維持できます。
+              法人・オフィス・店舗の定期清掃にも対応しています。
+            </p>
+            <a href="contact.html" class="btn-outline">お問い合わせ・見積り</a>
+          </div>
+
+          <div class="service-detail-card fade-in fade-in-delay-2">
+            <div class="service-icon">✨</div>
+            <h3>除菌・消臭</h3>
+            <p>
+              ウイルス・細菌・アレルゲンに対応した除菌コーティング、
+              ペット臭・タバコ臭・生活臭などの頑固なニオイを分子レベルで消臭。
+              新型ウイルス対策や、引越し前後の空間リフレッシュにもご活用いただけます。
+            </p>
+            <a href="contact.html" class="btn-outline">お問い合わせ・見積り</a>
+          </div>
+
+        </div>
+
+        <!-- ===================== ご利用の流れ ===================== -->
+        <div class="service-flow fade-in">
+          <h2>ご利用の流れ</h2>
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="flow-num">1</div>
+              <h3>お問い合わせ</h3>
+              <p>フォームまたはお電話でご連絡ください</p>
+            </div>
+            <div class="flow-step">
+              <div class="flow-num">2</div>
+              <h3>無料お見積り</h3>
+              <p>内容確認後、お見積りをご提示します</p>
+            </div>
+            <div class="flow-step">
+              <div class="flow-num">3</div>
+              <h3>日程調整</h3>
+              <p>ご都合に合わせて日時を決定します</p>
+            </div>
+            <div class="flow-step">
+              <div class="flow-num">4</div>
+              <h3>作業実施</h3>
+              <p>プロのスタッフが丁寧に作業します</p>
+            </div>
+            <div class="flow-step">
+              <div class="flow-num">5</div>
+              <h3>完了・お支払い</h3>
+              <p>作業確認後にお支払いいただきます</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===================== 料金について ===================== -->
+        <div class="price-note fade-in">
+          <strong>📋 料金について</strong><br>
+          料金はお部屋の広さ・汚れの状態・作業内容によって異なります。
+          まずはお気軽にお問い合わせください。<strong>無料でお見積り</strong>いたします。
+          法人・管理会社様の複数箇所ご依頼も歓迎します。
+        </div>
+
+        <!-- ===================== CTA ===================== -->
+        <div class="fade-in" style="text-align:center; padding:20px 0 40px;">
+          <p style="font-size:1rem; margin-bottom:24px; color:var(--color-text-light);">
+            ご不明な点はお気軽にご相談ください
+          </p>
+          <a href="contact.html" class="btn-primary" style="font-size:1.05rem; padding:16px 48px;">
+            お問い合わせ・無料見積りはこちら
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== 採用バナー ===================== -->
+    <section class="recruit-banner" style="padding:60px 20px;">
+      <div class="recruit-banner-inner fade-in">
+        <h2>あなたの力で、街をきれいに。</h2>
+        <p>未経験OK・充実の研修あり・スタッフ募集中</p>
+        <a href="recruit.html" class="btn-primary">採用情報を見る</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== フッター ===================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <img src="images/logo_full.png" alt="レレ堂">
+      <nav class="footer-nav">
+        <a href="service.html">サービス</a>
+        <a href="company.html">会社概要</a>
+        <a href="recruit.html">採用情報</a>
+        <a href="contact.html">お問い合わせ</a>
+      </nav>
+      <address>
+        〒105-0013 東京都港区浜松町二丁目7番15号<br>
+        TEL: 【要確認】 / MAIL: 【要確認】
+      </address>
+      <p class="copyright">&copy; 2026 株式会社レレ堂 All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
